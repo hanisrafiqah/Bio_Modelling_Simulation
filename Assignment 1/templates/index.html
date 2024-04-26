@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulation Results</h1>
+    <form method="POST" action="/">
+        <!-- Form fields to input model parameters -->
+        <label for="rC">rC:</label>
+        <input type="text" name="rC" value="{{ rC }}"><br><br>
+
+        <label for="dC">dC:</label>
+        <input type="text" name="dC" value="{{ dC }}"><br><br>
+
+        <label for="rH">rH:</label>
+        <input type="text" name="rH" value="{{ rH }}"><br><br>
+
+        <label for="kIL">kIL:</label>
+        <input type="text" name="kIL" value="{{ kIL }}"><br><br>
+
+        <label for="kCT">kCT:</label>
+        <input type="text" name="kCT" value="{{ kCT }}"><br><br>
+
+        <label for="s">s:</label>
+        <input type="text" name="s" value="{{ s }}"><br><br>
+
+        <label for="K">K:</label>
+        <input type="text" name="K" value="{{ K }}"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Display the image file -->
+    <!--dfjiedhfiudrgurdh<img src="{{ url_for('static', filename='plot.png') }}" alt="Simulation Findings">-->
+</body>
+</html>
